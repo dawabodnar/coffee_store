@@ -46,3 +46,24 @@ body{
     font-size: 20px;
     color: darkred;
 }
+#footer{
+    display:grid;
+    border: solid rgb(243, 231, 208);
+    font-family: cursive;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(250, 236, 209);
+    text-align: center;
+}
+#footer-menu{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#footer-certification{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+#footer-contacts{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}

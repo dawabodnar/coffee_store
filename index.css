@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(248, 236, 214);
+}
+#header-about-section{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    font-family: cursive ;
+    text-align: center;
+    background-color:rgb(236, 224, 202); 
+}
+#header-menu-section{
+    display: grid;
+    border: solid rgb(243, 231, 208);
+    font-family: cursive;
+    grid-template-columns: 43% 14% 43%; 
+    background-color: rgb(250, 236, 209);
+}
+#header-menu-left{ 
+    justify-self: right;
+    margin-right: 20px;
+}
+#header-menu-right{
+   grid-template-columns: auto auto;
+   display: grid;
+   margin-left: 20px;
+}
+#header-cart{
+   justify-self: right;
+}
+#header-coffee-beans{
+    font-size: 20px;
+    color:rgb(199, 0, 0);
+    margin-right: 10px;
+}
+#header-coffee-ground{
+    font-size: 20px;
+    color:rgb(139, 14, 14);
+    margin-left: 10px; 
+}
+#header-coffee-makers{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  justify-self: left;
+}
+#header-name{
+    font-size: 20px;
+    color: darkred;
+}

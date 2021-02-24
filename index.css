@@ -12,7 +12,7 @@ body{
     display: grid;
     border: solid rgb(243, 231, 208);
     font-family: cursive;
-    grid-template-columns: 43.25% 13.5% 43.25%; 
+    grid-template-columns: 43% 14% 43%; 
     background-color: rgb(250, 236, 209);
 }
 #header-menu-left{ 

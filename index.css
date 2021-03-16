@@ -26,12 +26,12 @@ body{
 #header-cart{
    justify-self: right;
 }
-#header-coffee-beans{
+.header-coffee-beans{
     font-size: 20px;
     color:#611205;
     margin-right: 10px;
 }
-#header-coffee-ground{
+.header-coffee-ground{
     font-size: 20px;
     color:#611205;
     margin-left: 10px; 
@@ -56,6 +56,9 @@ body{
 }
 a:link {
   text-decoration: none;
+}
+.header-link-active{
+    color: red;
 }
 .button{
     /* border-radius: 12px; */

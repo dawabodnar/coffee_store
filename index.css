@@ -48,21 +48,17 @@ body{
     color:darkred;
 }
 
-.main{
+.products-list {
     display:grid;
-    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: auto auto auto ;
-    margin-left: 250px;
-   
 }
-.filter{
+.content {
     display:grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto ;
+    grid-template-columns: 20% 80% ;
+}
+.filter {
     text-align: left;
-   margin-left: 80px;
-   
-   
+    margin-left: 80px;
 }
 .arrow{
     color: black;

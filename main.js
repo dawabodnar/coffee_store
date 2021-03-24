@@ -20,7 +20,7 @@ for( var i = 0; i < BEAN_PRODUCTS.length; i++){
 
 }
 
-
+// Потрібно зберігати ід кожного продукта в масив щоб потім їх можна було відобразити в корзині
 function addToCart(id) {
     console.log(id);
 }

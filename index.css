@@ -13,7 +13,7 @@ body{
 .header-menu-section{
     display: grid;
     border-bottom: 1px dotted #d9dada;
-    grid-template-columns: 43% 14% 43%; 
+    grid-template-columns: 43% 14% 43% ; 
     
 }
 .header-menu-left{ 
@@ -21,7 +21,7 @@ body{
     margin-right: 20px;
 }
 .header-menu-right{
-   grid-template-columns: auto auto;
+   grid-template-columns: auto auto auto;
    display: grid;
    margin-left: 20px;
 }
@@ -108,3 +108,7 @@ a:link {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
 }
+ #numberCart{
+    text-align: right;
+   margin-left: 425px;
+} 

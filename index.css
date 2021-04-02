@@ -137,17 +137,16 @@ a:link {
     height: 372px;
 }
 
-.coffee-foto {
+.coffee-product {
     display: grid;
-    grid-template-columns: 215px 390px;
-    width: 609px;
-    height: 430px;
+    grid-template-columns: 225px 390px 390px;
+    width: 1300px;
+    height: 500px;
     margin-left: 80px;
 }
 
 .coffee-info {
     text-align: center;
-    margin-left: 80px;
 }
 
 .text-price {
@@ -156,7 +155,7 @@ a:link {
     margin-bottom: 15px;
 }
 
-.but1 {
+.product-button {
     margin-left: 10px;
 }
 
@@ -166,7 +165,7 @@ a:link {
     margin-top: 30px;
 }
 
-.but-minus {
+.product-minus-qty {
     width: 20px;
     font-size: 14px;
     line-height: 38px;
@@ -175,7 +174,7 @@ a:link {
     border-color: rgba(51, 51, 51, 0.12)
 }
 
-.but-plus {
+.product-plus-qty {
     width: 20px;
     font-size: 14px;
     line-height: 38px;
@@ -184,7 +183,7 @@ a:link {
     border-color: rgba(51, 51, 51, 0.12)
 }
 
-.but-number {
+.product-text {
     width: 30px;
     padding: 0;
     margin: 0;
@@ -194,4 +193,27 @@ a:link {
     font-size: 14px;
     line-height: 20px;
     border-style: solid;
+}
+
+.text-storage {
+    border-top: solid rgba(51, 51, 51, 0.12);
+    text-align: left;
+}
+
+table {
+    margin-left: 200px;
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.storage {
+    width: 315px;
+}
+
+.information {
+    height: 40px;
+    width: 300px;
+    margin-left: 230px;
+    font-size: 20px;
 }

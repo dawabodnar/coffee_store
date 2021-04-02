@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <script src="constants/bean-products.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="../constants/bean-products.js"></script>
+    <link rel="stylesheet" type="text/css" href="../index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 </head>
@@ -32,20 +32,53 @@
     </div>
 
     <div style="font-size: 25px;">Кава у зернах UCC QUASITY</div>
-    <div class="coffee-foto">
-        <img src="E:\dev\project\coffee_store\images\barista-amato-250g-zerno-1-300x472.jpg " class="image1">
+    <div class="coffee-product">
+        <img src="../images/barista-amato-250g-zerno-1-300x472.jpg " class="image1">
         <div class="coffee-info">
             <div class="text-price">100грн</div>
             <div class="text">Barista Amato – бленд високоякісної арабіки з сильним характером для тих, хто любить дійсно насичений смак. і аромат для стовідсоткового задоволення від кожного ковтка.</div>
-            <input type="button" value="-" class="but-minus">
-            <input value="1" class="but-number">
-            <input type="button" value="+" class="but-plus">
-            <button class="but1">Додати у кошик</button>
+            <input type="button" value="-" class="product-minus-qty">
+            <input value="1" class="product-text">
+            <input type="button" value="+" class="product-plus-qty">
+            <button class="product-button">Додати у кошик</button>
             <div class="text" style=" color: rgba(130, 132, 138, 0.5);">Category: Кава у зернах</div>
         </div>
-    </div>
 
-    <div style="text-align: left;">Додаткова інформація</div>
+
+        <div class="storage">
+            <div class="information">Додаткова інформація</div>
+            <table>
+                <tr>
+                    <td class="text-storage">Бренд</td>
+                    <td class="text-storage">Barista Amato</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Вага</td>
+                    <td class="text-storage">250г</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Вид кави</td>
+                    <td class="text-storage"> У зернах</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Склад</td>
+                    <td class="text-storage">100% Арабіка</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Тип</td>
+                    <td class="text-storage">Купаж</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Вміст кофеїну</td>
+                    <td class="text-storage"> З кофеїном</td>
+                </tr>
+                <tr>
+                    <td class="text-storage">Ароматизація</td>
+                    <td class="text-storage">Не ароматизований</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
 
     <div class="footer">
@@ -65,7 +98,8 @@
         <div></div>
         <div>Пошта: <br>shop@coffe.market.com.ua</div>
     </div>
-    <script src="main.js"></script>
+    <script src="../common.js"></script>
+    <script src="product-details.js"></script>
 
 
 </body>

@@ -1,12 +1,11 @@
-const BEAN_PRODUCTS = [
-    {
+const BEAN_PRODUCTS = [{
         id: 1,
         name: "Кава у зернах Barista Amato",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
-        bigPhotoUrl: "images/barista-amato-250g-zerno-1-300x472.jpg" ,    
+        bigPhotoUrl: "images/barista-amato-250g-zerno-1-300x472.jpg",
         additionalInfo: {
-            band: "Arabica Coffee",
+            brand: "Arabica Coffee",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",
@@ -21,9 +20,9 @@ const BEAN_PRODUCTS = [
         name: "Кава у зернах Magic Anna",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
-        bigPhotoUrl:  "images/magic-anna-250g-zerno-1-300x472.jpg" ,   
+        bigPhotoUrl: "images/magic-anna-250g-zerno-1-300x472.jpg",
         additionalInfo: {
-            band: "Arabica Coffee",
+            brand: "Arabica Coffee",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",
@@ -38,9 +37,9 @@ const BEAN_PRODUCTS = [
         name: "Кава у зернах Tierra Antigua",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
-        bigPhotoUrl:  "images/monsooned-malabar-250g-zerno-1-300x472.jpg" ,   
+        bigPhotoUrl: "images/monsooned-malabar-250g-zerno-1-300x472.jpg",
         additionalInfo: {
-            band: "Arabica Coffee",
+            brand: "Arabica Coffee",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",
@@ -54,10 +53,10 @@ const BEAN_PRODUCTS = [
         id: 4,
         name: "Кава у зернах Tucan Verde",
         price: 1.0,
-        smallPhotoUrl:  "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg" ,
-        bigPhotoUrl: "images/tierra-antigua-250g-zerno-1-300x472.jpg" ,   
+        smallPhotoUrl: "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg",
+        bigPhotoUrl: "images/tierra-antigua-250g-zerno-1-300x472.jpg",
         additionalInfo: {
-            band: "Arabica Coffee",
+            brand: "Arabica Coffee",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",
@@ -72,9 +71,9 @@ const BEAN_PRODUCTS = [
         name: "Кава у зернах Monsooned Malabar",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
-        bigPhotoUrl:  "images/tukan-verde-250g-zerno-300x472.jpg" ,  
+        bigPhotoUrl: "images/tukan-verde-250g-zerno-300x472.jpg",
         additionalInfo: {
-            band: "Arabica Coffee",
+            brand: "Arabica Coffee",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",

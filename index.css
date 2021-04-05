@@ -126,7 +126,7 @@ a:link {
     font-size: 20px;
 }
 
-#numberCart {
+.number-cart {
     text-align: right;
     margin-left: 425px;
 }
@@ -139,7 +139,7 @@ a:link {
 
 .coffee-product {
     display: grid;
-    grid-template-columns: 225px 390px 390px;
+    grid-template-columns: 20% 30% 50%;
     width: 1300px;
     height: 500px;
     margin-left: 80px;

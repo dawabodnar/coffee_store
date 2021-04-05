@@ -60,6 +60,10 @@ body {
     grid-template-columns: auto auto auto;
 }
 
+.product-container {
+    cursor: pointer;
+}
+
 .content {
     display: grid;
     grid-template-columns: 20% 80%;

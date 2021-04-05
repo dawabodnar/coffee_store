@@ -5,7 +5,7 @@ const productType = urlParams.get("type");
 console.log(BEAN_PRODUCTS[productId])
 
 var fotoTag = document.getElementById("foto");
-fotoTag.setAttribute("src", "../images/barista-amato-250g-zerno-1-300x472.jpg")
+fotoTag.setAttribute("src", "../" + BEAN_PRODUCTS[productId].bigPhotoUrl);
 
 var priceTag = document.getElementById("price");
 priceTag.innerText = BEAN_PRODUCTS[productId].price + priceTag.innerText;
@@ -33,4 +33,3 @@ compositionTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.composition;
 
 var aromatizationTag = document.getElementById("aromatizationId")
 aromatizationTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.aromatization;
-

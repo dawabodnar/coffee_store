@@ -1,5 +1,4 @@
-const BEAN_PRODUCTS = [
-    {
+const BEAN_PRODUCTS = [{
         id: 0,
         name: "Кава у зернах Barista Amato",
         price: 1.0,
@@ -23,7 +22,7 @@ const BEAN_PRODUCTS = [
         smallPhotoUrl: "img/bean/smallImage.img",
         bigPhotoUrl: "images/magic-anna-250g-zerno-1-300x472.jpg",
         additionalInfo: {
-            brand: "Arabica Coffee",
+            brand: "Magic Anna",
             weight: 100,
             coffeeType: "У зернах",
             composition: "100% Арабіка",

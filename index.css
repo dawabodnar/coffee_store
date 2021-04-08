@@ -221,3 +221,51 @@ table {
     margin-left: 230px;
     font-size: 20px;
 }
+
+.grid-cart {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.zakaz {
+    margin-left: 100px;
+    text-align: left;
+}
+
+.goods {
+    text-align: left;
+    width: 250px;
+}
+
+.Price {
+    margin-left: 240px;
+    width: 50px;
+}
+
+.count {
+    margin-left: 350px;
+    width: 100px;
+}
+
+.total {
+    margin-left: 500px;
+    width: 100px;
+}
+
+.all {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.foto-cart {
+    width: 70px;
+    margin-right: 710px;
+}
+
+.order {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 10px;
+}

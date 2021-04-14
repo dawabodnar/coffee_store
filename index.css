@@ -71,7 +71,7 @@ body {
 
 .filter {
     text-align: left;
-    margin-left: 80px;
+    /* margin-left: 40px; */
 }
 
 .arrow {
@@ -262,4 +262,14 @@ table {
 .info-coffee-cart {
     display: grid;
     grid-template-columns: 25% 75%;
+}
+
+.text-filter {
+    font-size: 20px;
+}
+
+.coffee-filters {
+    display: grid;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.12);
+    border-right: 1px solid rgba(51, 51, 51, 0.12);
 }

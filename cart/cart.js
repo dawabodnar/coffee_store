@@ -10,6 +10,8 @@ function send() {
     object.surname = surnameCart.value;
     object.contact = contactCart.value;
     object.info = infoCart.value;
+    let saveInCart = localStorage.getItem('cartstorage')
+    object.cart = cartStorage;
     console.log(object)
     var sentOrder = document.getElementById("sendOrder");
     sentOrder.innerHTML = "Ваше замовлення прийнято. Через декілька хвилин з вами звяжеться наш працівник. Дякуємо Вам"

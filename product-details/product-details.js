@@ -1,3 +1,4 @@
+buttonPlus();
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 const productType = urlParams.get("type");
@@ -33,3 +34,25 @@ compositionTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.composition;
 
 var aromatizationTag = document.getElementById("aromatizationId")
 aromatizationTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.aromatization;
+
+
+
+
+
+
+function buttonPlus() {
+    let plus = document.getElementById("product-plus-qty-id");
+    let textButton = document.getElementById("product-text-id");
+    if (document.onclick = plus) {
+        textButton.value++;
+    }
+}
+
+function buttonMinus() {
+    let minus = document.getElementById("product-minus-qty-id");
+    let textButton = document.getElementById("product-text-id");
+    if (document.onclick = minus) {
+        textButton.value--;
+    }
+
+}

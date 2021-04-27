@@ -11,6 +11,7 @@ function send() {
     object.contact = contactCart.value;
     object.info = infoCart.value;
     let saveInCart = localStorage.getItem('cartstorage')
+    let cartStorage = JSON.parse(saveInCart);
     object.cart = cartStorage;
     console.log(object)
     var sentOrder = document.getElementById("sendOrder");
@@ -34,7 +35,11 @@ function emptyCart() {
                 "<img src='" + "../" + BEAN_PRODUCTS[numberId].bigPhotoUrl + "'  class='foto-cart'>" +
                 "<div>" + BEAN_PRODUCTS[numberId].name + "</div>" + "</div>" +
                 "<div>" + BEAN_PRODUCTS[numberId].price + "</div>" +
-                "<div>" + cartStorage[numberId] + "</div>" +
+                "<div>" +
+                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='buttonPlus()'>" +
+                "<input value='0' id='product-text-id' class='product-text'>" +
+                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='buttonMinus()'>" +
+                "</div>" +
                 "<div>" + 200 + "</div>" +
                 "</div>";
         }

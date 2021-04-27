@@ -20,6 +20,13 @@ function addToCart(id) {
 
 function updateCountInCart() {
     var number = document.getElementById("numberCart");
-    var count = Object.keys(cartStorage).length;
-    number.innerHTML = count;
+    console.log(Object.values(cartStorage), "кількість у хедері")
+    let arrayAmount = Object.values(cartStorage)
+    let total = 0;
+    for (var i = 0; i < arrayAmount.length; i++) {
+        total += arrayAmount[i];
+        console.log(total)
+        number.innerHTML = total;
+    }
+    // number.innerHTML = total;
 }

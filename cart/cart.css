@@ -1,0 +1,51 @@
+.arrow {
+    color: black;
+    text-align: right;
+}
+
+.cart-products {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.cart-order {
+    margin-left: 170px;
+    text-align: left;
+}
+
+.products-coffee-cart {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    border-bottom: solid #d9dada;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-title {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    height: 50px;
+    border-bottom: solid #d9dada;
+}
+
+.foto-cart {
+    width: 70px;
+}
+
+.order {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.info-coffee-cart {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.number-cart {
+    text-align: right;
+    margin-left: 425px;
+}

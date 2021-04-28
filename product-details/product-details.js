@@ -54,7 +54,7 @@ function buttonMinus() {
 function addToCarts() {
     let saveInCart = localStorage.getItem('cartstorage')
     let cartStorage = JSON.parse(saveInCart);
-    let cartAmount = cartStorage[productId]
+    let cartAmount = cartStorage[productId];
     if (cartAmount == null) {
         cartAmount = 0;
     }

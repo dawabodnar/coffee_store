@@ -1,0 +1,40 @@
+.coffee-contacts {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    margin-top: 40px;
+}
+
+.contact-send {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #f0eaea;
+    width: 370px;
+    height: 410px;
+}
+
+.contacts {
+    font-size: 28px;
+    border-bottom: 1px dotted #d9dada;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-text {
+    font-size: 21px;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.input-name {
+    width: 330px;
+    height: 30px;
+    margin-top: 8px;
+    background-color: #faf6f6;
+}
+
+.input-message {
+    width: 330px;
+    height: 180px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #faf6f6;
+}

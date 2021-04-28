@@ -24,9 +24,8 @@ function updateCountInCart() {
     let arrayAmount = Object.values(cartStorage)
     let total = 0;
     for (var i = 0; i < arrayAmount.length; i++) {
-        total += arrayAmount[i];
+        total = total + arrayAmount[i];
         console.log(total)
-        number.innerHTML = total;
     }
-    // number.innerHTML = total;
+    number.innerHTML = total;
 }

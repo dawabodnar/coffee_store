@@ -14,8 +14,11 @@ function addToCart(id) {
         cartStorage[id] = 1;
     }
     updateCountInCart()
-    console.log(cartStorage)
+    console.log('cartStorage -->', cartStorage[id])
     localStorage.setItem('cartstorage', JSON.stringify(cartStorage));
+
+    document.querySelector('.number-cart').classList.add('animated')
+    setTimeout(() => document.querySelector('.number-cart').classList.remove('animated'), 300)
 }
 
 function updateCountInCart() {

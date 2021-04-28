@@ -32,6 +32,21 @@ body {
     justify-self: right;
 }
 
+.animated {
+    animation: numberCartAnimation 0.2s;
+}
+
+@keyframes numberCartAnimation {
+    50% {
+        color: red;
+        font-size: 20px;
+    }
+    100% {
+        color: black;
+        font-size: initial;
+    }
+}
+
 .header-coffee-beans {
     font-size: 20px;
     color: #611205;

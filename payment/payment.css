@@ -1,0 +1,20 @@
+.payment-products {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: 1px dotted #d9dada;
+    border-top: 1px dotted #d9dada;
+    border-left: 1px dotted #d9dada;
+    border-right: 1px dotted #d9dada;
+    background-color: #f3ecec
+}
+
+.img-icon {
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.text-payment {
+    margin-top: 15px;
+}

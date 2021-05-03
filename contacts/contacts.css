@@ -12,12 +12,6 @@
     height: 410px;
 }
 
-.contacts {
-    font-size: 28px;
-    border-bottom: 1px dotted #d9dada;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .contact-text {
     font-size: 21px;
     margin-bottom: 10px;
@@ -37,4 +31,17 @@
     margin-top: 8px;
     margin-bottom: 8px;
     background-color: #faf6f6;
+}
+
+.networks {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.bi bi-geo-alt-fill {
+    margin-top: 60px;
 }

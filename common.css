@@ -136,3 +136,9 @@ a:link {
     text-align: right;
     margin-left: 425px;
 }
+
+.text-title {
+    font-size: 28px;
+    border-bottom: 1px dotted #d9dada;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

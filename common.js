@@ -1,34 +1,40 @@
-var saveInCart = localStorage.getItem('cartstorage')
-var cartStorage;
-if (saveInCart === null) {
-    cartStorage = {}
-} else {
-    cartStorage = JSON.parse(saveInCart);
-}
-updateCountInCart()
+updateHeaderCartFromLC(false);
 
-function addToCart(id) {
-    if (cartStorage[id] != undefined) {
-        cartStorage[id]++;
+function getCartFromLC() {
+    let saveInCart = localStorage.getItem('cartstorage');
+    if (saveInCart === null) {
+        return {};
     } else {
-        cartStorage[id] = 1;
+        return JSON.parse(saveInCart);
     }
-    updateCountInCart()
-    console.log('cartStorage -->', cartStorage[id])
-    localStorage.setItem('cartstorage', JSON.stringify(cartStorage));
-
-    document.querySelector('.number-cart').classList.add('animated')
-    setTimeout(() => document.querySelector('.number-cart').classList.remove('animated'), 300)
 }
 
-function updateCountInCart() {
-    var number = document.getElementById("numberCart");
-    console.log(Object.values(cartStorage), "кількість у хедері")
-    let arrayAmount = Object.values(cartStorage)
+function setCartInLC(cart) {
+    localStorage.setItem('cartstorage', JSON.stringify(cart));
+}
+
+function updateHeaderCartFromLC(withAnimation) {
+    let cart = getCartFromLC();
+    let headerCartNumber = document.getElementById("numberCart");
+    let cartAmounts = Object.values(cart)
     let total = 0;
-    for (var i = 0; i < arrayAmount.length; i++) {
-        total = total + arrayAmount[i];
-        console.log(total)
+    for (var i = 0; i < cartAmounts.length; i++) {
+        total = total + cartAmounts[i];
     }
-    number.innerHTML = total;
+    headerCartNumber.innerHTML = total;
+    if (withAnimation) {
+        document.querySelector('.number-cart').classList.add('animated');
+        setTimeout(() => document.querySelector('.number-cart').classList.remove('animated'), 300);
+    }
+}
+
+function changeItemAmountInCart(id, amount) {
+    let cart = getCartFromLC();
+    if (cart[id] != undefined) {
+        cart[id] = cart[id] + amount;
+    } else {
+        cart[id] = amount;
+    }
+    setCartInLC(cart);
+    updateHeaderCartFromLC(true);
 }

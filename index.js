@@ -6,7 +6,7 @@ for (var i = 0; i < BEAN_PRODUCTS.length; i++) {
         "<div>" + BEAN_PRODUCTS[i].name + "</div>" +
         "<div>" + BEAN_PRODUCTS[i].price + "</div>" +
         "</div>" +
-        "<button onClick='addToCart(" + BEAN_PRODUCTS[i].id + ")' class='button'>В корзину</button>" +
+        "<button onClick='changeItemAmountInCart(" + BEAN_PRODUCTS[i].id + ", 1" + ")' class='button'>В корзину</button>" +
         "</div>";
 
 }

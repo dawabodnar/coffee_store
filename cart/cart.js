@@ -46,3 +46,17 @@ function emptyCart() {
 
     }
 }
+
+function buttonPlus() {
+    let plus = document.getElementById("product-plus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value++;
+    changeItemAmountInCart(1, 1); // TODO id
+}
+
+function buttonMinus() {
+    let minus = document.getElementById("product-minus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value--;
+    changeItemAmountInCart(1, -1); // TODO id
+}

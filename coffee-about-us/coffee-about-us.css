@@ -1,0 +1,19 @@
+.about-us{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    text-align: left;
+    margin-left: 100px;
+}
+.img-coffee{
+    margin-left: 300px;
+    margin-top: 80px;
+}
+.assortment{
+    border-bottom: 1px dotted #d9dada;
+    border-top: 1px dotted #d9dada;
+    border-left: 1px dotted #d9dada;
+    border-right: 1px dotted #d9dada;
+    background-color: #f3efef;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

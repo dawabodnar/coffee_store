@@ -73,8 +73,7 @@ body {
 .footer {
     display: grid;
     border-top: solid #d9dada;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     background-color: #f7f5f2;
 }
 
@@ -89,10 +88,10 @@ body {
 }
 
 
-/* .footer-aboutUs {
+ .footer-aboutUs {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
-} */
+} 
 
 .product-minus-qty {
     width: 20px;
@@ -131,11 +130,11 @@ a:link {
 .header-link-active {
     color: red;
 }
-
-.number-cart {
+ 
+ .number-cart {
     text-align: right;
-    margin-left: 490px;
-}
+     margin-left: 490px; 
+}  
 
 .text-title {
     font-size: 28px;

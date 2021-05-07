@@ -1,4 +1,3 @@
-buttonPlus()
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 const productType = urlParams.get("type");
@@ -40,4 +39,16 @@ function addToCarts() {
     let amountButtonAsNumber = Number.parseInt(amountButton.value)
 
     changeItemAmountInCart(productId, amountButtonAsNumber);
+}
+
+function plusOneItemButton() {
+    let plus = document.getElementById("product-plus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value++;
+}
+
+function minusOneItemButton(id) {
+    let minus = document.getElementById("product-minus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value--;
 }

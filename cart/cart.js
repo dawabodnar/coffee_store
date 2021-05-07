@@ -27,36 +27,22 @@ function emptyCart() {
         let cartStorage = JSON.parse(saveInCart);
         let arrayId = Object.keys(cartStorage);
         for (var i = 0; i < arrayId.length; i++) {
-            var numberId = arrayId[i];
+            var productId = arrayId[i];
             var productsTable = document.getElementById("products-table");
             productsTable.innerHTML = productsTable.innerHTML +
                 "<div class='products-coffee-cart'>" +
                 "<div class='info-coffee-cart'>" +
-                "<img src='" + "../" + BEAN_PRODUCTS[numberId].bigPhotoUrl + "'  class='foto-cart'>" +
-                "<div>" + BEAN_PRODUCTS[numberId].name + "</div>" + "</div>" +
-                "<div>" + BEAN_PRODUCTS[numberId].price + "</div>" +
+                "<img src='" + "../" + BEAN_PRODUCTS[productId].bigPhotoUrl + "'  class='foto-cart'>" +
+                "<div>" + BEAN_PRODUCTS[productId].name + "</div>" + "</div>" +
+                "<div>" + BEAN_PRODUCTS[productId].price + "</div>" +
                 "<div>" +
-                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='buttonPlus()'>" +
+                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='addOneItemToCart(" + productId + ")'>" +
                 "<input value='0' id='product-text-id' class='product-text'>" +
-                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='buttonMinus()'>" +
+                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='removeOneItemFromCart(" + productId + ")'>" +
                 "</div>" +
                 "<div>" + 200 + "</div>" +
                 "</div>";
         }
 
     }
-}
-
-function buttonPlus() {
-    let plus = document.getElementById("product-plus-qty-id");
-    let amountButton = document.getElementById("product-text-id");
-    amountButton.value++;
-    changeItemAmountInCart(1, 1); // TODO id
-}
-
-function buttonMinus() {
-    let minus = document.getElementById("product-minus-qty-id");
-    let amountButton = document.getElementById("product-text-id");
-    amountButton.value--;
-    changeItemAmountInCart(1, -1); // TODO id
 }

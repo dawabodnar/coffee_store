@@ -38,3 +38,17 @@ function changeItemAmountInCart(id, amount) {
     setCartInLC(cart);
     updateHeaderCartFromLC(true);
 }
+
+function addOneItemToCart(id) {
+    let plus = document.getElementById("product-plus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value++;
+    changeItemAmountInCart(id, 1);
+}
+
+function removeOneItemFromCart(id) {
+    let minus = document.getElementById("product-minus-qty-id");
+    let amountButton = document.getElementById("product-text-id");
+    amountButton.value--;
+    changeItemAmountInCart(id, -1);
+}

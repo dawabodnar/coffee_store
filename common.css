@@ -9,12 +9,18 @@ body {
     grid-template-columns: auto auto auto auto auto;
     background: #e9e9e9;
     border-bottom: 1px dotted #d9dada;
+   height: 30px;
+   padding-top: 3px;
 }
 
 .header-menu-section {
     display: grid;
     border-bottom: 1px dotted #d9dada;
     grid-template-columns: 43% 14% 43%;
+    height: 40px;
+    padding-top: 10px;
+    background: #f7f5f5;
+
 }
 
 .header-menu-left {
@@ -140,4 +146,11 @@ a:link {
     font-size: 28px;
     border-bottom: 1px dotted #d9dada;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+.indent{
+    margin-top:70px ;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
 }

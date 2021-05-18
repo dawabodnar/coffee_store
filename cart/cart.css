@@ -6,12 +6,12 @@
 .cart-products {
     display: grid;
     grid-template-columns: 60% 40%;
+    font-size: large;
 }
 
 .cart-order {
     margin-left: 200px;
     text-align: left;
-    font-size: large;
 }
 
 .products-coffee-cart {

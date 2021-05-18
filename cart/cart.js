@@ -1,4 +1,4 @@
-emptyCart();
+showProductList();
 
 function send() {
     var nameCart = document.getElementById("name-cart");
@@ -18,7 +18,7 @@ function send() {
     sentOrder.innerHTML = "Ваше замовлення прийнято. Через декілька хвилин з вами звяжеться наш працівник. Дякуємо Вам"
 }
 
-function emptyCart() {
+function showProductList() {
     let empty = document.getElementById("products-table")
     let saveInCart = localStorage.getItem('cartstorage')
     if (saveInCart === null) {
@@ -28,6 +28,7 @@ function emptyCart() {
         let arrayId = Object.keys(cartStorage);
         for (var i = 0; i < arrayId.length; i++) {
             var productId = arrayId[i];
+           let productSum = BEAN_PRODUCTS[productId].price * cartStorage[productId]
             var productsTable = document.getElementById("products-table");
             productsTable.innerHTML = productsTable.innerHTML +
                 "<div class='products-coffee-cart'>" +
@@ -36,13 +37,29 @@ function emptyCart() {
                 "<div>" + BEAN_PRODUCTS[productId].name + "</div>" + "</div>" +
                 "<div>" + BEAN_PRODUCTS[productId].price + "</div>" +
                 "<div>" +
-                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='addOneItemToCart(" + productId + ")'>" +
-                "<input value='0' id='product-text-id' class='product-text'>" +
-                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='removeOneItemFromCart(" + productId + ")'>" +
+                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='removeOneItemFromCartLocal(" + productId + ")'>" +
+                "<input value='" + cartStorage[productId] +"' id='product-text-id-"+ productId +"' class='product-text'>"+
+                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='addOneItemToCartLocal(" + productId + ")'>" +
                 "</div>" +
-                "<div>" + 200 + "</div>" +
+                "<div>" + productSum + "</div>" +
                 "</div>";
         }
 
     }
+}
+
+function addOneItemToCartLocal(id) {
+    let amountButton = document.getElementById("product-text-id-" + id);
+    amountButton.value++;
+    changeItemAmountInCart(id, 1);
+  
+}
+
+function removeOneItemFromCartLocal(id) {
+    let amountButton = document.getElementById("product-text-id-" + id);
+   
+if (amountButton.value > 0) {
+    amountButton.value--;
+    changeItemAmountInCart(id, -1);
+}
 }

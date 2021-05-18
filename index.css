@@ -5,6 +5,9 @@
 
 .product-container {
     cursor: pointer;
+  width: 200px;
+  margin-left: 60px;
+  /* padding-right: 10px; */
    
 }
 
@@ -39,10 +42,14 @@
 
 .text-filter {
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .coffee-filters {
     display: grid;
     border-bottom: 1px solid rgba(51, 51, 51, 0.12);
     border-right: 1px solid rgba(51, 51, 51, 0.12);
+}
+.sorting{
+    margin-right: 680px;
 }

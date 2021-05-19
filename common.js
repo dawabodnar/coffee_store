@@ -7,12 +7,12 @@ function getCartFromLC() {
     } else {
         return JSON.parse(saveInCart);
     }
-    
+
 }
 
 function setCartInLC(cart) {
-    localStorage.setItem('cartstorage', JSON.stringify(cart)); 
-    
+    localStorage.setItem('cartstorage', JSON.stringify(cart));
+
 }
 
 function updateHeaderCartFromLC(withAnimation) {
@@ -28,7 +28,7 @@ function updateHeaderCartFromLC(withAnimation) {
         document.querySelector('.number-cart').classList.add('animated');
         setTimeout(() => document.querySelector('.number-cart').classList.remove('animated'), 300);
     }
-  
+
 }
 
 function changeItemAmountInCart(id, amount) {
@@ -40,7 +40,7 @@ function changeItemAmountInCart(id, amount) {
     }
     setCartInLC(cart);
     updateHeaderCartFromLC(true);
-   
+
 
 }
 

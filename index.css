@@ -1,14 +1,14 @@
 .products-list {
     display: grid;
-    grid-template-columns:auto auto auto;
+    grid-template-columns: auto auto auto;
 }
 
 .product-container {
     cursor: pointer;
-  width: 200px;
-  margin-left: 60px;
-  /* padding-right: 10px; */
-   
+    width: 200px;
+    margin-left: 60px;
+    /* padding-right: 10px; */
+
 }
 
 .content {
@@ -50,6 +50,7 @@
     border-bottom: 1px solid rgba(51, 51, 51, 0.12);
     border-right: 1px solid rgba(51, 51, 51, 0.12);
 }
-.sorting{
+
+.sorting {
     margin-right: 680px;
 }

@@ -28,7 +28,7 @@ function showProductList() {
         let arrayId = Object.keys(cartStorage);
         for (var i = 0; i < arrayId.length; i++) {
             var productId = arrayId[i];
-           let productSum = BEAN_PRODUCTS[productId].price * cartStorage[productId]
+            let productSum = BEAN_PRODUCTS[productId].price * cartStorage[productId]
             var productsTable = document.getElementById("products-table");
             productsTable.innerHTML = productsTable.innerHTML +
                 "<div class='products-coffee-cart'>" +
@@ -38,7 +38,7 @@ function showProductList() {
                 "<div>" + BEAN_PRODUCTS[productId].price + "</div>" +
                 "<div>" +
                 "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='removeOneItemFromCartLocal(" + productId + ")'>" +
-                "<input value='" + cartStorage[productId] +"' id='product-text-id-"+ productId +"' class='product-text'>"+
+                "<input value='" + cartStorage[productId] + "' id='product-text-id-" + productId + "' class='product-text'>" +
                 "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='addOneItemToCartLocal(" + productId + ")'>" +
                 "</div>" +
                 "<div>" + productSum + "</div>" +
@@ -52,14 +52,14 @@ function addOneItemToCartLocal(id) {
     let amountButton = document.getElementById("product-text-id-" + id);
     amountButton.value++;
     changeItemAmountInCart(id, 1);
-  
+
 }
 
 function removeOneItemFromCartLocal(id) {
     let amountButton = document.getElementById("product-text-id-" + id);
-   
-if (amountButton.value > 0) {
-    amountButton.value--;
-    changeItemAmountInCart(id, -1);
-}
+
+    if (amountButton.value > 0) {
+        amountButton.value--;
+        changeItemAmountInCart(id, -1);
+    }
 }

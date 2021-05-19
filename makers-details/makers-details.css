@@ -40,7 +40,7 @@ table {
 
 .storage {
     width: 315px;
-    
+
 }
 
 .information {
@@ -55,8 +55,9 @@ table {
     width: 200px;
     height: 372px;
 }
-.description{
-      width: 700px; 
+
+.description {
+    width: 700px;
     text-align: center;
     margin-left: 300px;
 }

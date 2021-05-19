@@ -49,5 +49,8 @@ function plusOneItemButton() {
 function minusOneItemButton(id) {
     let minus = document.getElementById("product-minus-qty-id");
     let amountButton = document.getElementById("product-text-id");
-    amountButton.value--;
+    if (amountButton.value > 0) {
+        amountButton.value--;
+
+    }
 }

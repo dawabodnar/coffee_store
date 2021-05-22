@@ -27,9 +27,9 @@ function showProductList() {
         let cartStorage = JSON.parse(saveInCart);
         let arrayId = Object.keys(cartStorage);
         for (var i = 0; i < arrayId.length; i++) {
-            var productId = arrayId[i];
+            let productId = arrayId[i];
             let productSum = BEAN_PRODUCTS[productId].price * cartStorage[productId]
-            var productsTable = document.getElementById("products-table");
+            let productsTable = document.getElementById("products-table");
             productsTable.innerHTML = productsTable.innerHTML +
                 "<div class='products-coffee-cart'>" +
                 "<div class='info-coffee-cart'>" +
@@ -37,11 +37,11 @@ function showProductList() {
                 "<div>" + BEAN_PRODUCTS[productId].name + "</div>" + "</div>" +
                 "<div>" + BEAN_PRODUCTS[productId].price + "</div>" +
                 "<div>" +
-                "<input type='button' value='-' id='product-minus-qty-id' class='product-minus-qty' , onclick='removeOneItemFromCartLocal(" + productId + ")'>" +
+                "<input type='button' value='-' id='product-minus-qty-id' class='product-amount-button' , onclick='removeOneItemFromCartLocal(" + productId + ")'>" +
                 "<input value='" + cartStorage[productId] + "' id='product-text-id-" + productId + "' class='product-text'>" +
-                "<input type='button' value='+' id='product-plus-qty-id' class='product-plus-qty' , onclick='addOneItemToCartLocal(" + productId + ")'>" +
+                "<input type='button' value='+' id='product-plus-qty-id' class='product-amount-button' , onclick='addOneItemToCartLocal(" + productId + ")'>" +
                 "</div>" +
-                "<div>" + productSum + "</div>" +
+                "<div id='product-sum-" + productId + "'>" + productSum + "</div>" +
                 "</div>";
         }
 
@@ -53,6 +53,10 @@ function addOneItemToCartLocal(id) {
     amountButton.value++;
     changeItemAmountInCart(id, 1);
 
+    let productList = getCartFromLC();
+    let sumDiv = document.getElementById("product-sum-" + id);
+    let newSum = BEAN_PRODUCTS[id].price * productList[id];
+    sumDiv.innerText = newSum;
 }
 
 function removeOneItemFromCartLocal(id) {
@@ -61,5 +65,10 @@ function removeOneItemFromCartLocal(id) {
     if (amountButton.value > 0) {
         amountButton.value--;
         changeItemAmountInCart(id, -1);
+
+        let productList = getCartFromLC();
+        let sumDiv = document.getElementById("product-sum-" + id);
+        let newSum = BEAN_PRODUCTS[id].price * productList[id];
+        sumDiv.innerText = newSum;
     }
 }

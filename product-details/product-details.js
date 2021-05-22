@@ -1,38 +1,37 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 const productType = urlParams.get("type");
-
-console.log(BEAN_PRODUCTS[productId])
+const product = findProductById(productId);
 
 var fotoTag = document.getElementById("foto");
-fotoTag.setAttribute("src", "../" + BEAN_PRODUCTS[productId].bigPhotoUrl);
+fotoTag.setAttribute("src", "../" + product.bigPhotoUrl);
 
 var priceTag = document.getElementById("price");
-priceTag.innerText = BEAN_PRODUCTS[productId].price + priceTag.innerText;
-
-var textTag = document.getElementById("textId")
-textTag.innerText = BEAN_PRODUCTS[productId].description;
+priceTag.innerText = product.price + priceTag.innerText;
 
 var brandTag = document.getElementById("brandId")
-brandTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.brand;
+brandTag.innerText = product.additionalInfo.brand;
 
 var weightTag = document.getElementById("weightId")
-weightTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.weight;
+weightTag.innerText = product.additionalInfo.weight;
 
 var coffeeTypeTag = document.getElementById("coffeeTypeId")
-coffeeTypeTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.coffeeType;
+coffeeTypeTag.innerText = product.additionalInfo.coffeeType;
 
 var compositionTypeTag = document.getElementById("compositionTypeId")
-compositionTypeTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.compositionType;
+compositionTypeTag.innerText = product.additionalInfo.compositionType;
 
 var caffeineContentTag = document.getElementById("caffeineContentId")
-caffeineContentTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.caffeineContent;
+caffeineContentTag.innerText = product.additionalInfo.caffeineContent;
 
 var compositionTag = document.getElementById("compositionId")
-compositionTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.composition;
+compositionTag.innerText = product.additionalInfo.composition;
 
 var aromatizationTag = document.getElementById("aromatizationId")
-aromatizationTag.innerText = BEAN_PRODUCTS[productId].additionalInfo.aromatization;
+aromatizationTag.innerText = product.additionalInfo.aromatization;
+
+var description = document.getElementById("description")
+description.innerHTML = product.description;
 
 function addToCarts() {
     let amountButton = document.getElementById("product-text-id");
@@ -41,16 +40,13 @@ function addToCarts() {
 }
 
 function plusOneItemButton() {
-    let plus = document.getElementById("product-plus-qty-id");
     let amountButton = document.getElementById("product-text-id");
     amountButton.value++;
 }
 
 function minusOneItemButton(id) {
-    let minus = document.getElementById("product-minus-qty-id");
     let amountButton = document.getElementById("product-text-id");
     if (amountButton.value > 0) {
         amountButton.value--;
-
     }
 }

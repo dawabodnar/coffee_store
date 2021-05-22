@@ -1,38 +1,37 @@
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 const productType = urlParams.get("type");
-
-console.log(ACCESSORY_PRODUCTS[productId])
+const product = findProductById(productId);
 
 var fotoTag = document.getElementById("foto");
-fotoTag.setAttribute("src", "../" + ACCESSORY_PRODUCTS[productId].bigPhotoUrl);
+fotoTag.setAttribute("src", "../" + product.bigPhotoUrl);
 
 var priceTag = document.getElementById("price");
-priceTag.innerText = ACCESSORY_PRODUCTS[productId].price + priceTag.innerText;
+priceTag.innerText = product.price + priceTag.innerText;
 
 var textTag = document.getElementById("textId")
-textTag.innerText = ACCESSORY_PRODUCTS[productId].description;
+textTag.innerText = product.description;
 
 var brandTag = document.getElementById("brandId")
-brandTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.brand;
+brandTag.innerText = product.additionalInfo.brand;
 
 var weightTag = document.getElementById("weightId")
-weightTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.weight;
+weightTag.innerText = product.additionalInfo.weight;
 
 var coffeeTypeTag = document.getElementById("coffeeTypeId")
-coffeeTypeTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.coffeeType;
+coffeeTypeTag.innerText = product.additionalInfo.coffeeType;
 
 var compositionTypeTag = document.getElementById("compositionTypeId")
-compositionTypeTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.compositionType;
+compositionTypeTag.innerText = product.additionalInfo.compositionType;
 
 var caffeineContentTag = document.getElementById("caffeineContentId")
-caffeineContentTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.caffeineContent;
+caffeineContentTag.innerText = product.additionalInfo.caffeineContent;
 
 var compositionTag = document.getElementById("compositionId")
-compositionTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.composition;
+compositionTag.innerText = product.additionalInfo.composition;
 
 var aromatizationTag = document.getElementById("aromatizationId")
-aromatizationTag.innerText = ACCESSORY_PRODUCTS[productId].additionalInfo.aromatization;
+aromatizationTag.innerText = product.additionalInfo.aromatization;
 
 function addToCarts() {
     let amountButton = document.getElementById("product-text-id");

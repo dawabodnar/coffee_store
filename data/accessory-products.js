@@ -1,6 +1,6 @@
 const ACCESSORY_PRODUCTS = [
     {
-        id: 0,
+        id: ACCESSORY_TYPE + "-0",
         name: "Кавоварка",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
@@ -10,7 +10,7 @@ const ACCESSORY_PRODUCTS = [
         description: "A lot of text"
     },
     {
-        id: 1,
+        id: ACCESSORY_TYPE + "-1",
         name: "Турка",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
@@ -20,7 +20,7 @@ const ACCESSORY_PRODUCTS = [
         description: "A lot of text"
     },
     {
-        id: 2,
+        id: ACCESSORY_TYPE + "-2",
         name: "Чашки",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
@@ -30,7 +30,7 @@ const ACCESSORY_PRODUCTS = [
         description: "A lot of text"
     },
     {
-        id: 3,
+        id: ACCESSORY_TYPE + "-3",
         name: "Ложки",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
@@ -40,7 +40,7 @@ const ACCESSORY_PRODUCTS = [
         description: "A lot of text"
     },
     {
-        id: 4,
+        id: ACCESSORY_TYPE + "-4",
         name: "Набір",
         price: 1.0,
         smallPhotoUrl: "https://assol.in.ua/image/cache/catalog/assol/4935/kavovarka-ardesto-ecm-em-14-s-1-768x768.jpg",

@@ -4,7 +4,9 @@
 <head>
     <title>DISTRICT COFFEE</title>
     <link rel="icon" href="../images/title-icon.jpg" type="image / icon type">
+    <script src="../data/constants.js"></script>
     <script src="../data/bean-products.js"></script>
+    <script src="../data/data-service.js"></script>
     <link rel="stylesheet" type="text/css" href="../common.css" />
     <link rel="stylesheet" type="text/css" href="product-details.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -46,11 +48,10 @@
             <img src=" " id="foto" class="image1">
             <div class="coffee-info">
                 <div id="price" class="text-price"> грн</div>
-                <div id="textId" class="text"></div>
-                <input type="button" value="-" id="product-minus-qty-id" class="product-minus-qty"
+                <input type="button" value="-" id="product-minus-qty-id" class="product-amount-button"
                     onclick="minusOneItemButton()">
                 <input value="0" id="product-text-id" class="product-text">
-                <input type="button" value="+" id="product-plus-qty-id" class="product-plus-qty"
+                <input type="button" value="+" id="product-plus-qty-id" class="product-amount-button"
                     onclick="plusOneItemButton()">
                 <button onclick="addToCarts()" class="product-button">Додати у кошик</button>
                 <div class="text" style=" color: rgba(130, 132, 138, 0.5);">Category: Кава у зернах</div>
@@ -92,10 +93,7 @@
             </div>
         </div>
         <h3 class="description">Опис</h3>
-        <div class="description">Малабарский мусон – відмінний вибір, щоб почати знайомство з індійською арабікою. Це
-            кава зі своєю історією і ексклюзивним способом обробки вологими вітрами. В результаті напій відрізняється
-            насиченістю, міцністю і щільністю тіла.
-            Основні відтінки смаку – свіжий хліб і фрукти. А в ароматі легко вловити гіркий шоколад.</div>
+        <div id="description" class="description"></div>
     </div>
     <div class="footer">
         <div>

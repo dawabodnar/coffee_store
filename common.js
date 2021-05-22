@@ -40,19 +40,5 @@ function changeItemAmountInCart(id, amount) {
     }
     setCartInLC(cart);
     updateHeaderCartFromLC(true);
-
-
-}
-
-function addOneItemToCart(id) {
-    let amountButton = document.getElementById("product-text-id-" + id);
-    amountButton.value++;
-    changeItemAmountInCart(id, 1);
-}
-
-function removeOneItemFromCart(id) {
-    let amountButton = document.getElementById("product-text-id-" + id);
-    amountButton.value--;
-    changeItemAmountInCart(id, -1);
 }
 

@@ -1,4 +1,5 @@
 let productList = BEAN_PRODUCTS
+let mainOrder = null;
 
 initFilters();
 renderList(productList);
@@ -15,19 +16,19 @@ function renderFilter(filterName, filterHtmlId) {
     let filterValuesKeys = Object.keys(filterValues);
     let filterHtml = document.getElementById(filterHtmlId);
     for(let i = 0; i < filterValuesKeys.length; i++) {
-        filterHtml.innerHTML = filterHtml.innerHTML + "<div onclick='selectFilter(\"" + filterName + "\", \"" + filterValuesKeys[i] + "\")'>" + filterValuesKeys[i] + " <span>(" + filterValues[filterValuesKeys[i]] + ")</span></div>";
+        filterHtml.innerHTML = filterHtml.innerHTML + "<div style='cursor:pointer' onclick='selectFilter(\"" + filterName + "\", \"" + filterValuesKeys[i] + "\")'>" + filterValuesKeys[i] + " <span>(" + filterValues[filterValuesKeys[i]] + ")</span></div>";
     }
 }
 
 function selectFilter(fieldName, value) {
-    let newFilteredList = getListFilteredBy(fieldName, value);
+    let newFilteredList = getListFilteredBy(fieldName, value, mainOrder);
     productList = newFilteredList;
     renderList(productList);
 }
 
 function selectOrder(order) {
-    console.log(order.value)
-    renderList(getOrderedProductList(productList, order.value));
+    mainOrder = order.value;
+    renderList(getOrderedProductList(productList, mainOrder));
 }
 
 function renderList(productList) {

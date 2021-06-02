@@ -1,16 +1,21 @@
 function findProductById(id) {
     if (id.includes(COFFEE_TYPE)) {
-        // return findProduct(BEAN_PRODUCTS, id);
-        return BEAN_PRODUCTS[0]; // видалити
+         return findProduct(BEAN_PRODUCTS, id);
     } else if (id.includes(ACCESSORY_TYPE)) {
-        // return findProduct(ACCESSORY_PRODUCTS, id);
-        return ACCESSORY_PRODUCTS[0]; // видалити
+        return findProduct(ACCESSORY_PRODUCTS, id);
     }
     return null;
 }
 
 function findProduct(productList, id) {
-    for (var i = 0; i < id.length; i++) {}
+    for (var i = 0; i < id.length; i++) {
+        if(productList[i].id == id){
+            return productList[i]
+
+        }
+       
+        
+    }
 }
 
 

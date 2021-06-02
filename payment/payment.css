@@ -1,4 +1,4 @@
-.payment-products {
+/* .payment-products {
     display: grid;
     grid-template-columns: auto auto;
     border-bottom: 1px dotted #d9dada;
@@ -6,7 +6,7 @@
     border-left: 1px dotted #d9dada;
     border-right: 1px dotted #d9dada;
     background-color: #f3efef
-}
+} */
 
 .img-icon {
     background-color: black;

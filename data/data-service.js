@@ -18,13 +18,37 @@ function findProduct(productList, id) {
     }
 }
 
+function getValuesByField(field) {
+    let brands = {};
+    for (var i = 0; i < BEAN_PRODUCTS.length; i++) {
+        let fieldValue = BEAN_PRODUCTS[i].additionalInfo[field];
+        brands[fieldValue] = brands[fieldValue] == undefined ? 1 : ++brands[fieldValue];
+    }
+    return brands;
+}
 
-/*
-Буде визначений список полів по яким будемо фільтрувати.
+function getListFilteredBy(fieldName, value, order) {
+    let filteredList = [];
+    for (var i = 0; i < BEAN_PRODUCTS.length; i++) {
+        if(BEAN_PRODUCTS[i].additionalInfo[fieldName] == value) {
+            filteredList.push(BEAN_PRODUCTS[i]);
+        }
+    }
+    if (order == "desc") {
+        return filteredList.sort((p1, p2) => p2.price - p1.price);
+    } else if (order == "asc") {
+        return filteredList.sort((p1, p2) => p1.price - p2.price);
+    } else {
+        return filteredList;
+    }
+}
 
-Одна функція яка проходить по списку і по конкретному полі і дістає всі можливі варіанти.
-
-Функції які повертають ці можливі варіанти.
-
-Функції які повертають відсортований список.
-*/
+function getOrderedProductList(list, order) {
+    if (order == "desc") {
+        return list.sort((p1, p2) => p2.price - p1.price);
+    } else if (order == "asc") {
+        return list.sort((p1, p2) => p1.price - p2.price);
+    } else {
+        return list;
+    }
+}

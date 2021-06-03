@@ -18,20 +18,11 @@ brandTag.innerText = product.additionalInfo.brand;
 var weightTag = document.getElementById("weightId")
 weightTag.innerText = product.additionalInfo.weight;
 
-var coffeeTypeTag = document.getElementById("coffeeTypeId")
-coffeeTypeTag.innerText = product.additionalInfo.coffeeType;
-
-var compositionTypeTag = document.getElementById("compositionTypeId")
-compositionTypeTag.innerText = product.additionalInfo.compositionType;
-
 var caffeineContentTag = document.getElementById("caffeineContentId")
 caffeineContentTag.innerText = product.additionalInfo.caffeineContent;
 
-var compositionTag = document.getElementById("compositionId")
-compositionTag.innerText = product.additionalInfo.composition;
 
-var aromatizationTag = document.getElementById("aromatizationId")
-aromatizationTag.innerText = product.additionalInfo.aromatization;
+
 
 function addToCarts() {
     let amountButton = document.getElementById("product-text-id");

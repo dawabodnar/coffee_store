@@ -5,11 +5,11 @@
 }
 
 .contact-send {
-    margin-top: 50px;
+    margin-top: 90px;
     padding: 10px;
-    background-color: #f0eaea;
+    background-color:  #f3f0f0;
     width: 370px;
-    height: 410px;
+    height: 380px;
     margin-left: 50px;
 
 }
@@ -17,14 +17,15 @@
 .contact-text {
     font-size: 21px;
     margin-bottom: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive;
+
 }
 
 .input-name {
     width: 330px;
     height: 30px;
     margin-top: 8px;
-    background-color: #faf6f6;
+    background-color: #f5f4f3;
 }
 
 .input-message {
@@ -32,18 +33,20 @@
     height: 180px;
     margin-top: 8px;
     margin-bottom: 8px;
-    background-color: #faf6f6;
+    background-color: #f5f4f3;
 }
 
 .networks {
-    text-align: left;
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 70px;
+    padding: 10px;
+    background-color:  #f3f0f0;
+    margin-right: 90px;
+    width: 340px;
+
 }
 
 .text {
     margin-top: 20px;
 }
 
-.bi bi-geo-alt-fill {
-    margin-top: 60px;
-}

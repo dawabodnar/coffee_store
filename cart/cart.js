@@ -23,7 +23,7 @@ function send() {
         let cartStorage = JSON.parse(saveInCart);
         object.cart = cartStorage;
         console.log(object);
-        sentOrder.innerHTML = "Ваше замовлення прийнято. Через декілька хвилин з вами звяжеться наш працівник. Дякуємо Вам!";
+        sentOrder.innerHTML = "Ваше замовлення прийнято.<br> Через декілька хвилин з вами звяжеться наш працівник.<br> Дякуємо Вам!";
         cleanCartInLC();
         renderTotalSum();
         showProductList();

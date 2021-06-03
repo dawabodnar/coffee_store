@@ -41,9 +41,8 @@ function renderList(productList) {
             "<div>" + productList[i].name + "</div>" +
             "<div>" + productList[i].price + "</div>" +
             "</div>" +
-            "<button onClick='changeItemAmountInCart(" + productList[i].id + ", 1" + ")' class='button'>В корзину</button>" +
+            "<button onClick='changeItemAmountInCart(\"" + productList[i].id + "\", 1" + ")' class='button'>В корзину</button>" +
             "</div>";
-    
     }
 }
 

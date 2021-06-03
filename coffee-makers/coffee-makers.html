@@ -37,7 +37,17 @@
 
     </div>
 
-    <div class="coffee-makers" id="coffee-makers-id">
+    <div>
+        <div class="products">
+            Сортувати за ціною:
+            <select onchange='selectOrder(this)' class="sorting">
+                <option disabled selected value></option>
+                <option value="asc">від нижчої до вижчої</option>
+                <option value="desc">від вижчої до нижчої</option>
+            </select>
+            <div class="coffee-makers" id="products-list-id">
+            </div>
+        </div>
     </div>
    
 

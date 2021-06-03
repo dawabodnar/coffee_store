@@ -58,9 +58,11 @@
                 </div>
             </div>
             <div class="products">
+                Сортувати за ціною:
                 <select onchange='selectOrder(this)' class="sorting">
-                    <option value="asc">Сортувати за ціною: від нижчої до вижчої</option>
-                    <option value="desc">Сортувати за ціною: від вижчої до нижчої</option>
+                    <option disabled selected value></option>
+                    <option value="asc">від нижчої до вижчої</option>
+                    <option value="desc">від вижчої до нижчої</option>
                 </select>
                 <div class="products-list" id="products-list-id">
                 </div>

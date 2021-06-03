@@ -1,3 +1,4 @@
+renderTotalSum();
 showProductList();
 
 function send() {
@@ -19,32 +20,30 @@ function send() {
 }
 
 function showProductList() {
-    let empty = document.getElementById("products-table")
-    let saveInCart = localStorage.getItem('cartstorage')
-    if (saveInCart === null) {
-        empty.innerHTML = "Пусто"
+    let productsTable = document.getElementById("products-table");
+    let cartFromLC = getCartFromLC();
+    let cartKeys = Object.keys(cartFromLC)
+    if (cartKeys.length === 0) {
+        productsTable.innerHTML = "Пусто";
     } else {
-        let cartStorage = JSON.parse(saveInCart);
-        let arrayId = Object.keys(cartStorage);
-        for (var i = 0; i < arrayId.length; i++) {
-            let productId = arrayId[i];
-            let productSum = BEAN_PRODUCTS[productId].price * cartStorage[productId]
-            let productsTable = document.getElementById("products-table");
+        for (var i = 0; i < cartKeys.length; i++) {
+            let productId = cartKeys[i];
+            let product = findProductById(productId);
+            let productSum = product.price * cartFromLC[productId];
             productsTable.innerHTML = productsTable.innerHTML +
                 "<div class='products-coffee-cart'>" +
                 "<div class='info-coffee-cart'>" +
-                "<img src='" + "../" + BEAN_PRODUCTS[productId].bigPhotoUrl + "'  class='foto-cart'>" +
-                "<div>" + BEAN_PRODUCTS[productId].name + "</div>" + "</div>" +
-                "<div>" + BEAN_PRODUCTS[productId].price + "</div>" +
+                "<img src='" + "../" + product.bigPhotoUrl + "'  class='foto-cart'>" +
+                "<div>" + product.name + "</div>" + "</div>" +
+                "<div>" + product.price + "</div>" +
                 "<div>" +
-                "<input type='button' value='-' id='product-minus-qty-id' class='product-amount-button' , onclick='removeOneItemFromCartLocal(" + productId + ")'>" +
-                "<input value='" + cartStorage[productId] + "' id='product-text-id-" + productId + "' class='product-text'>" +
-                "<input type='button' value='+' id='product-plus-qty-id' class='product-amount-button' , onclick='addOneItemToCartLocal(" + productId + ")'>" +
+                "<input type='button' value='-' id='product-minus-qty-id' class='product-amount-button' , onclick='removeOneItemFromCartLocal(\"" + productId + "\")'>" +
+                "<input value='" + cartFromLC[productId] + "' id='product-text-id-" + productId + "' class='product-text'>" +
+                "<input type='button' value='+' id='product-plus-qty-id' class='product-amount-button' , onclick='addOneItemToCartLocal(\"" + productId + "\")'>" +
                 "</div>" +
                 "<div id='product-sum-" + productId + "'>" + productSum + "</div>" +
                 "</div>";
         }
-
     }
 }
 
@@ -55,8 +54,9 @@ function addOneItemToCartLocal(id) {
 
     let productList = getCartFromLC();
     let sumDiv = document.getElementById("product-sum-" + id);
-    let newSum = BEAN_PRODUCTS[id].price * productList[id];
+    let newSum = findProductById(id).price * productList[id];
     sumDiv.innerText = newSum;
+    renderTotalSum();
 }
 
 function removeOneItemFromCartLocal(id) {
@@ -68,7 +68,24 @@ function removeOneItemFromCartLocal(id) {
 
         let productList = getCartFromLC();
         let sumDiv = document.getElementById("product-sum-" + id);
-        let newSum = BEAN_PRODUCTS[id].price * productList[id];
+        let newSum = findProductById(id).price * productList[id];
         sumDiv.innerText = newSum;
+        renderTotalSum();
     }
+}
+
+function renderTotalSum() {
+    let sumToPay = document.getElementById("sumToPay");
+    let cartFromLC = getCartFromLC();
+    let cartKeys = Object.keys(cartFromLC);
+    let totalSum = 0;
+    if (cartKeys.length !== 0) {
+        for (var i = 0; i < cartKeys.length; i++) { 
+            let productId = cartKeys[i];
+            let product = findProductById(productId);
+            let productSum = product.price * cartFromLC[productId]
+            totalSum += productSum;
+        }
+    }
+    sumToPay.innerHTML = totalSum;
 }

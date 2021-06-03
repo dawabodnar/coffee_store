@@ -14,7 +14,7 @@ const ACCESSORY_PRODUCTS = [
         name: "Турка",
         price: 1.0,
         smallPhotoUrl: "img/bean/smallImage.img",
-        bigPhotoUrl: "https://turka.in.ua/wp-content/uploads/2015/10/Pavlin_transparent-e1465250816835.png",    
+        bigPhotoUrl: "https://cdn.comfy.ua/media/catalog/product/cache/5/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/k/r/krups_kp1a0531_1_.jpg",    
         additionalInfo: {
         },
         description: "A lot of text"

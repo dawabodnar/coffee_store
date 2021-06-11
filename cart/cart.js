@@ -2,21 +2,33 @@ renderTotalSum();
 showProductList();
 
 function send() {
-    var nameCart = document.getElementById("name-cart");
-    var surnameCart = document.getElementById("surname-cart");
-    var contactCart = document.getElementById("contact-cart");
-    var infoCart = document.getElementById("info-cart");
-    var object = {};
-    object.name = nameCart.value;
-    object.surname = surnameCart.value;
-    object.contact = contactCart.value;
-    object.info = infoCart.value;
-    let saveInCart = localStorage.getItem('cartstorage')
-    let cartStorage = JSON.parse(saveInCart);
-    object.cart = cartStorage;
-    console.log(object)
+    var nameCart = document.getElementById("name-cart").value;
+    var surnameCart = document.getElementById("surname-cart").value;
+    var contactCart = document.getElementById("contact-cart").value;
+    var infoCart = document.getElementById("info-cart").value;
     var sentOrder = document.getElementById("sendOrder");
-    sentOrder.innerHTML = "Ваше замовлення прийнято.<br> Через декілька хвилин з вами звяжеться наш працівник.<br> Дякуємо Вам"
+    let cart = getCartFromLC();
+    
+    if (Object.keys(cart).length === 0) {
+        sentOrder.innerHTML = "Корзина пуста.";
+    } else if (nameCart === "" || surnameCart === "" || contactCart === "" || infoCart === "") {
+        sentOrder.innerHTML = "Заповніть всі необхідні поля.";
+    } else {
+        var object = {};
+        object.name = nameCart;
+        object.surname = surnameCart;
+        object.contact = contactCart;
+        object.info = infoCart;
+        let saveInCart = localStorage.getItem('cartstorage')
+        let cartStorage = JSON.parse(saveInCart);
+        object.cart = cartStorage;
+        console.log(object);
+        sentOrder.innerHTML = "Ваше замовлення прийнято.<br> Через декілька хвилин з вами звяжеться наш працівник.<br> Дякуємо Вам!";
+        cleanCartInLC();
+        renderTotalSum();
+        showProductList();
+        updateHeaderCartFromLC(true);
+    }
 }
 
 function showProductList() {

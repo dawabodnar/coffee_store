@@ -2,17 +2,19 @@ updateHeaderCartFromLC(false);
 
 function getCartFromLC() {
     let saveInCart = localStorage.getItem('cartstorage');
-    if (saveInCart === null) {
+    if (saveInCart === null || JSON.parse(saveInCart) === null) {
         return {};
     } else {
         return JSON.parse(saveInCart);
     }
-
 }
 
 function setCartInLC(cart) {
     localStorage.setItem('cartstorage', JSON.stringify(cart));
+}
 
+function cleanCartInLC() {
+    localStorage.setItem('cartstorage', null);
 }
 
 function updateHeaderCartFromLC(withAnimation) {

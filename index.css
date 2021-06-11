@@ -11,38 +11,8 @@
 
 }
 
-.content {
-    display: grid;
-    grid-template-columns: 20% 80%;
-}
-
-.filter {
-    text-align: left;
-}
-
-.button {
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.button:hover {
-    background-color: #e4022e;
-    color: white;
-}
 
 
 
-.text-filter {
-    font-size: 20px;
-    margin-top: 10px;
-}
 
-.coffee-filters {
-    display: grid;
-    border-bottom: 1px solid rgba(51, 51, 51, 0.12) ;
-    border-right: 1px solid rgba(51, 51, 51, 0.12);
-}
 

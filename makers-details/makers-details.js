@@ -9,19 +9,17 @@ fotoTag.setAttribute("src", "../" + product.bigPhotoUrl);
 var priceTag = document.getElementById("price");
 priceTag.innerText = product.price + priceTag.innerText;
 
-var textTag = document.getElementById("textId")
-textTag.innerText = product.description;
+
 
 var brandTag = document.getElementById("brandId")
 brandTag.innerText = product.additionalInfo.brand;
 
-var weightTag = document.getElementById("weightId")
-weightTag.innerText = product.additionalInfo.weight;
 
-var caffeineContentTag = document.getElementById("caffeineContentId")
-caffeineContentTag.innerText = product.additionalInfo.caffeineContent;
+var typeTag = document.getElementById("type")
+typeTag.innerText = product.additionalInfo.type;
 
-
+var textTag = document.getElementById("textId")
+textTag.innerText = product.description;
 
 
 function addToCarts() {

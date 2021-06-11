@@ -15,16 +15,16 @@
 
 <body>
     <div class="header-about-section">
-        <div class="bi bi-telephone-fill">+380953269551 </div>
-        <div class="bi bi-envelope">coffeedistrict2021@gmail.com </div>
-        <div>
+        <div class="bi bi-telephone-fill" style="margin-left: 30px;">+380953269551 </div>
+        <div class="bi bi-envelope" >coffeedistrict2021@gmail.com </div>
+        <div style="margin-right: 500px;">
             <i class="bi bi-telegram"></i>
             <i class="bi bi-telephone-plus-fill"></i>
             <i class="bi bi-instagram"></i>
         </div>
         <a href="../payment/payment.html" style="color: black;" style="text-align: right;">Оплата та
             доставка</a>
-        <a href="../contacts/contacts.html" style="color: black;" style="text-align: right;">Контакти</a>
+        <a href="../contacts/contacts.html" class="contact">Контакти</a>
     </div>
     <div class="header-menu-section">
         <div class="header-menu-left">
@@ -48,12 +48,13 @@
             <img src=" " id="foto" class="image1">
             <div class="coffee-info">
                 <div id="price" class="text-price"> грн</div>
-                <div id="textId" class="text"></div>
-                <input type="button" value="-" id="product-minus-qty-id" class="product-minus-qty"
-                    onclick="minusOneItemButton()">
-                <input value="0" id="product-text-id" class="product-text">
-                <input type="button" value="+" id="product-plus-qty-id" class="product-plus-qty"
-                    onclick="plusOneItemButton()">
+                <div class="quantity">
+                    <input type="button" value="-" id="product-minus-qty-id" class="product-amount-button"
+                        onclick="minusOneItemButton()">
+                    <input value="0" id="product-text-id" class="product-text">
+                    <input type="button" value="+" id="product-plus-qty-id" class="product-amount-button"
+                        onclick="plusOneItemButton()">
+                        </div>
                 <button onclick="addToCarts()" class="product-button">Додати у кошик</button>
                 <div class="text" style=" color: rgba(130, 132, 138, 0.5);">Category: Кава у зернах</div>
             </div>
@@ -66,13 +67,10 @@
                         <td class="text-storage">Бренд</td>
                         <td id="brandId" class="text-storage"></td>
                     </tr>
-                    <tr>
-                        <td class="text-storage">Вага</td>
-                        <td id="weightId" class="text-storage"></td>
-                    </tr>
+                    
                     <tr>
                         <td class="text-storage">Тип</td>
-                        <td id="caffeineContentId" class="text-storage"></td>
+                        <td id="type" class="text-storage"></td>
                     </tr>
                   
                 </table>

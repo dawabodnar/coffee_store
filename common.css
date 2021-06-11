@@ -25,7 +25,7 @@ body {
 
 .header-menu-left {
     justify-self: right;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .header-menu-right {
@@ -57,23 +57,20 @@ body {
 .header-coffee-beans {
     font-size: 20px;
     color: #611205;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
-.header-coffee-ground {
-    font-size: 20px;
-    color: #611205;
-    margin-left: 10px;
-}
+
 
 .header-coffee-makers {
     font-size: 20px;
     color: #611205;
     justify-self: left;
+    margin-left: 10px;
 }
 
 .header-name {
-    font-size: 20px;
+    font-size: 21px;
     color: darkred;
 }
 
@@ -99,26 +96,29 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
 }
+.quantity{
+    display: inline-block;
+}
 
 .product-amount-button {
-    width: 20px;
-    font-size: 14px;
-    line-height: 38px;
-    color: rgba(139, 141, 148, 0.5);
-    border: 1px solid;
-    border-color: rgba(51, 51, 51, 0.12)
+    height: 41px;
+    background-color:transparent;
+    padding: 7px 10px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(51,51,51,0.12);
+    border-image: initial;
 }
 
 .product-text {
     width: 30px;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
+    height: 38px;
     text-align: center;
-    height: 30px;
-    font-size: 14px;
-    line-height: 20px;
+    background-color: transparent;
+    padding: 0px 5px;
+    border-width: 1px;
     border-style: solid;
+    border-color: rgba(51,51,51,0.12);
 }
 
 a:link {
@@ -135,9 +135,10 @@ a:link {
 }
 
 .text-title {
-    font-size: 28px;
+    font-size: 25px;
     border-bottom: 1px dotted #d9dada;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px;
 
 }
 
@@ -152,7 +153,61 @@ a:link {
 }
 .image {
     width: 200px;
-    height: 372px;
+    height: 200px;
     margin-top: 70px;
     margin-bottom: 25px;
 }
+.contact{
+    text-align: right;
+    color: black;
+   margin-right: 80px;
+}
+.filter {
+    text-align: left;
+}
+
+.text-filter {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.coffee-filters {
+    display: grid;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.12) ;
+    border-right: 1px solid rgba(51, 51, 51, 0.12);
+}
+.content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.button {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.header-coffee-beans:hover {
+    background-color: #e4022e;
+    color: white;
+}
+.image1 {
+    margin-right: 1000px;
+    width: 215px;
+    height: 260px;
+    margin-top: 30px;
+}
+.coffee-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.text-price {
+    height: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+

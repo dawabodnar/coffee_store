@@ -14,7 +14,7 @@ function renderList(productList) {
     for (var i = 0; i < productList.length; i++) {
         productsListHtml.innerHTML = productsListHtml.innerHTML + "<div class='makers-container'>" +
             "<div onclick='selectProduct(\"" + productList[i].id + "\")'>" +
-            "<img src='" + productList[i].bigPhotoUrl + "' class='image'>" +
+            "<img src='"+ "../"  + productList[i].bigPhotoUrl + "' class='image'>" +
             "<div>" + productList[i].name + "</div>" +
             "<div>" + productList[i].price + "</div>" +
             "</div>" +

@@ -83,4 +83,71 @@ const BEAN_PRODUCTS = [{
         },
         description: "A lot of text"
     },
+    {
+        id: COFFEE_TYPE + "-5",
+        name: "Кава у зернах Blasercafe Lilla & Rose (1кг)",
+        price: 6.0,
+        smallPhotoUrl: "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg",
+        bigPhotoUrl: "images/Blasercafe-Orient-1kg-600.jpg",
+        additionalInfo: {
+            brand: "Arabica Coffee",
+            weight: 100,
+            coffeeType: "У зернах",
+            composition: "100% Арабіка",
+            compositionType: "Купаж",
+            caffeineContent: "З кофеїном",
+            aromatization: "Не ароматизований"
+        },
+        description: "A lot of text"
+    },
+    {
+        id: COFFEE_TYPE + "-6",
+        name: "Кава у зернах Blasercafe-Opera (1кг)",
+        price: 6.0,
+        smallPhotoUrl: "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg",
+        bigPhotoUrl: "images/Opera.png",
+        additionalInfo: {
+            brand: "Arabica Coffee",
+            weight: 100,
+            coffeeType: "У зернах",
+            composition: "100% Арабіка",
+            compositionType: "Купаж",
+            caffeineContent: "З кофеїном",
+            aromatization: "Не ароматизований"
+        },
+        description: "A lot of text"
+    }, {
+        id: COFFEE_TYPE + "-7",
+        name: "Кава у зернах Blasercafe Lilla & Rose (1кг)",
+        price: 6.0,
+        smallPhotoUrl: "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg",
+        bigPhotoUrl: "images/Blasercafe-Lilla-Rose-1-kg-600.webp",
+        additionalInfo: {
+            brand: "Arabica Coffee",
+            weight: 100,
+            coffeeType: "У зернах",
+            composition: "100% Арабіка",
+            compositionType: "Купаж",
+            caffeineContent: "З кофеїном",
+            aromatization: "Не ароматизований"
+        },
+        description: "A lot of text"
+    }, {
+        id: COFFEE_TYPE + "-8",
+        name: "Кава у зернах Blasercafe-Ballerina(1кг)",
+        price: 6.0,
+        smallPhotoUrl: "E:\dev\project\coffee_store\images\tierra-antigua-250g-zerno-1-300x472.jpg",
+        bigPhotoUrl: "images/Blasercafe-Orient-1kg-600.jpg",
+        additionalInfo: {
+            brand: "Arabica Coffee",
+            weight: 100,
+            coffeeType: "У зернах",
+            composition: "100% Арабіка",
+            compositionType: "Купаж",
+            caffeineContent: "З кофеїном",
+            aromatization: "Не ароматизований"
+        },
+        description: "A lot of text"
+    }
+
 ];

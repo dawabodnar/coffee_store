@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Кава у зернах</title>
+
+	<!-- favicon -->
+
+	<link rel="shortcut icon" type="image/png"
+		href="https://i.pinimg.com/originals/aa/95/01/aa9501df489c885cce3f31b0fc6234ef.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<script src="assets/js/coffee-list.js"></script>
+	
+</head>
+
+<body>
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row ">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo" style="margin-top: -12px;">
+							<a href="index.html">
+								<p class="site-logo"> CoffeeDistrict </p>
+							</a>
+						</div>
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Наші продукти</a></li>
+								<li><a href="delivery-payment.html">Доставка і оплата</a></li>
+								<li><a href="contact.html">Контакти</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>найсмачніша кава у зернах</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- single product -->
+
+	<div class="row">
+		<div class="col-lg-8 offset-lg-2 text-center">
+			<div class="section-title">
+				<h3 style="margin-top: 40px;"><span class="orange-text">Кава</span> у зернах</h3>
+			</div>
+		</div>
+	</div> 
+
+
+	<div class="product-section mt-50 mb-100">
+		<div class="container">
+			<div class="row">
+				<div class="sort">
+					Сортувати за ціною:
+					<select onchange='selectOrder(this)' class="sorting">
+						<option disabled selected value></option>
+						<option value="asc">від нижчої до вижчої</option>
+						<option value="desc">від вижчої до нижчої</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-sm-3">
+                    <div class="product-filters">
+						<div id="filter-brand" class="coffee-filters">
+							<div class="text-filter">Бренд</div>
+						</div>
+					</div>
+				</div>	
+
+				<div class="col-sm-9">
+					<div class="row" id="products-list-id"></div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 text-center" style="margin-bottom: 40px;">
+					<div id="pagination" class="pagination-wrap">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Меню</h2>
+						<ul>
+							<li><a href="index.html">Наші продукти</a></li>
+							<li><a href="delivery-payment.html">Доставка і оплата</a></li>
+							<li><a href="contact.html">Контакти</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Контакти</h2>
+						<ul>
+							<li>Адреса: місто Київ</li>
+							<li>Працюємо: Пн-Сб: 09:00-20:00</li>
+							<li>Телефон: +380953269551</li>
+							<li>Пошта: coffeedistrict2021@gmail.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Ми в соціальних мережах</h2>
+						<ul>
+
+							<li><a href="https://instagram.com/coffeedistrict2021?utm_medium=copy_link"
+									target="_blank"><i class="fab fa-instagram"></i></a></li>
+
+							<li><a href="#" target="_blank"><i class="far fa-paper-plane"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul><li></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+
+	<!-- jquery -->
+	<script src="assets/js/system/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/system/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/system/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/system/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/system/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/system/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/system/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/system/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/system/main.js"></script>
+
+	<script src="assets/js/system/jquery-ui.js"></script>
+
+
+	<script src="assets/js/index.js"></script>
+	<script src="assets/js/cart-api.js"></script>
+	<script src="assets/js/products-page.js"></script>
+</body>
+
+</html>
